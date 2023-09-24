@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>BootStrap Task 3</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" type="text/css">
+        <style>
+            .card:hover{
+                transform: scale(1.02);
+                box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+            }
+        </style>
+    </head>
+    <body class="m-5 mt-2">
+        <p class="h1">Bootstrap Task 3</p>
+        <p class="h5">By 21BCE5919 Vikram Ramkumar</p>
+        <a href = "index.html">Index</a> <br> <br>
+
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid border-bottom">
+                    <a class="navbar-brand text-dark m-2 fs-5" href="#"><strong>Company Name</strong></a>
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark" aria-current="page" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Enterprise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Pricing</a>    
+                        </li>
+                        <li>
+                            <button class="btn btn-outline-primary">Sign Up</button>
+                        </li>
+                    </ul>
+                </div>
+              </nav>
+        </header>
+
+        <!-- Main -->
+        <main class="m-5">
+            <p class="display-3 text-center">Pricing</p>
+            <p class="text-lead text-center mb-4">
+                Quickly build an effective pricing table for your potential customers with this <br> Bootstrap example. It's built with default Bootstrap components and utilities <br> with little customization.
+            </p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-body-tertiary border-dark text-center">Free</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-center"><strong>$0</strong> / mo</h5>
+                            <p class="card-text text-center">10 users included <br> 2 GB of storage <br> Email support <br> Help center access</p>
+                            <center><button type="button" class="btn btn-outline-primary btn-block">Sign up for free</button></center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-body-tertiary border-dark text-center">Pro</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-center"><strong>$15</strong> / mo</h5>
+                            <p class="card-text text-center">20 users included <br> 10 GB of storage <br> Priority email support <br> Help center access</p>
+                            <center><button type="button" class="btn btn-outline-light bg-primary btn-block">Get Started</button></center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-dark mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-body-tertiary border-dark text-center">Enterprise</div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title text-center"><strong>$29</strong> / mo</h5>
+                            <p class="card-text text-center">30 users included <br> 15 GB of storage <br> Phone and email support <br> Help center access</p>
+                            <center><button type="button" class="btn btn-outline-light bg-primary btn-block">Contact Us</button></center>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </main>
+
+        <!-- Footer -->
+        <div class="container">
+                    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                    <div class="col mb-3">
+                        <i class="fa-brands fa-bootstrap fa-xl"></i>
+                        <p class="text-muted">&copy; 2022</p>
+                    </div>
+                    <div class="col mb-3"> </div>
+                    <div class="col mb-3">
+                        <h5>Features</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cool Stuff</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Random Feature</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Team Feature</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <h5>Resources</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Resource</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Resource Name</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Another Resource</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <h5>About</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Team</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Locations</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy</a></li>
+                        </ul>
+                    </div>
+                    </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

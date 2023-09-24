@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Task 4</title>
+    </head>
+    <body>
+        <h1>Javascript Task 4</h1>
+        <h5>By 21BCE5919 Vikram Ramkumar</h5>
+        <a href = "index.html">Index</a> <br> <br>
+
+        <h3>Date and Time</h3>
+        <button onclick="showDate()">Show Date</button> <br>
+        <span id="date"></span>
+
+        <br><br>
+        <button onclick="showTime()">Show Time</button> <br>
+        <span id="time"></span>
+
+        <script>
+            function showDate() {
+                const months = ["January", "February", "March", "April", "May",
+                                "June", "July", "August", "September", "October", 
+                                "November", "December"];
+                const date = new Date();
+                let day = date.getDate();
+                let month = date.getMonth();
+                let year = date.getFullYear();
+                document.getElementById("date").innerHTML = day + "/" + months[month - 1] + "/" + year;
+            }
+
+            function showTime() {
+                const date = new Date();
+                document.getElementById("time").innerHTML = date;
+            }
+        </script>
+    </body>
+</html>

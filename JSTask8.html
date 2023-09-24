@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Task 8</title>
+        <style>
+            th, td {
+                padding: 10px;
+            }
+            #grad {
+                background-image: linear-gradient(rgb(237, 237, 107)    , pink);
+            }
+            .form {
+                width: 60%;
+                padding-top: 50px;
+                padding-left: 70px;
+                padding-right: 5px;
+                padding-bottom: 50px;
+            }
+            .button {
+                background-color: red;
+                color: white;
+                padding: 10px;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Task 8</h1>
+        <h5>By 21BCE5919 Vikram Ramkumar</h5>
+        <a href = "index.html">Index</a> <br> <br>
+
+        <center>
+            <form onsubmit="return validate()" id="grad" class="form">
+                <h1 style="color: blue;">Registration Form</h1>
+                <table>
+                    <tr>
+                        <td><label for="fn">First Name</label></td>
+                        <td>
+                            <input type="text" name="fn" id="fn">
+                            <span style="color: red;" id="error1"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="ln">Last Name</label></td>
+                        <td>
+                            <input type="text" name="ln" id="ln">
+                            <span style="color: red;" id="error2"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="em">Email</label></td>
+                        <td>
+                            <input type="text" name="em" id="em">
+                            <span style="color: red;" id="error3"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">Password</label></td>
+                        <td>
+                            <input type="text" name="pwd" id="pwd">
+                            <span style="color: red;" id="error4"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">Re-enter Password</label></td>
+                        <td>
+                            <input type="text" name="pwd2" id="pwd2">
+                            <span style="color: red;" id="error5"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gen">Gender</label>
+                            <span style="color: red;" id="error6"></span>
+                        </td>
+                        <td>
+                            <input type="radio" name="gen" id="gen" value="Male">Male <br>
+                            <input type="radio" name="gen" id="gen" value="Female">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Age</label></td>
+                        <td>
+                            <input type="number" name="age" id="age">
+                            <span style="color: red;" id="error7"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phno">Phone Number</label></td>
+                        <td>
+                            <input type="number" name="phno" id="phno">
+                            <span style="color: red;" id="error8"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="addr">Address</label></td>
+                        <td>
+                            <textarea name="addr" id="addr" cols="20" rows="5"></textarea>
+                            <span style="color: red;" id="error9"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="state">State</label></td>
+                        <td>
+                            <input type="text" name="state" id="state">
+                            <span style="color: red;" id="error10"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td>
+                            <select>
+                                <option disabled selected>Choose your country</option>
+                                <option value="country">India</option>
+                                <option value="country">USA</option>
+                                <option value="country">China</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="lang">Languages known</label></td>
+                        <td>
+                            <input type="checkbox" name="lang" id="lang">English
+                            <input type="checkbox" name="lang" id="lang">Kannada
+                            <input type="checkbox" name="lang" id="lang">Hindi
+                            <input type="checkbox" name="lang" id="lang">Telugu
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="declare" id="declare"> Hereby I declare all the given details are true
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            Login to <a href="https://www.ethnus.com">Ethnus</a> website
+                        </td>
+                    </tr>
+                </table>
+                <button class="button" type="submit">Register</button>
+            </form>
+        </center>
+
+        <script>
+            function validate() {
+                // Clear the error messages
+                document.getElementById("error1").innerHTML = "";
+                document.getElementById("error2").innerHTML = "";
+                document.getElementById("error3").innerHTML = "";
+                document.getElementById("error4").innerHTML = "";
+                document.getElementById("error5").innerHTML = "";
+                document.getElementById("error6").innerHTML = "";
+                document.getElementById("error7").innerHTML = "";
+                document.getElementById("error8").innerHTML = "";
+                document.getElementById("error9").innerHTML = "";
+                document.getElementById("error10").innerHTML = "";
+                
+
+                var fn = document.getElementById("fn").value;
+                var ln = document.getElementById("ln").value;
+                var em = document.getElementById("em").value;
+                var pwd = document.getElementById("pwd").value;
+                var pwd2 = document.getElementById("pwd2").value;
+                var age = document.getElementById("age").value;
+                var phno = document.getElementById("phno").value;
+                var addr = document.getElementById("addr").value;
+                var state = document.getElementById("state").value;
+
+                var flag = false;
+
+                if (fn === "") {
+                    flag = true;
+                    document.getElementById("error1").innerHTML = "POOR";
+                }
+                if (ln === "") {
+                    flag = true;
+                    document.getElementById("error2").innerHTML = "POOR";
+                }
+                if (em === "") {    
+                    flag = true;
+                    document.getElementById("error3").innerHTML = "POOR";
+                }
+                if (pwd === "") {
+                    flag = true;
+                    document.getElementById("error4").innerHTML = "POOR";
+                }
+                if ((pwd2 !== pwd && pwd !== "") || pwd2 ==="") {
+                    flag = true;
+                    document.getElementById("error5").innerHTML = "POOR OR MISMATCH";
+                }
+                // flag = true;
+                // document.getElementById("error6").innerHTML = "POOR";
+                var genderOptions = document.getElementsByName("gen");
+                var selectedGender = false;
+
+                for (var i = 0; i < genderOptions.length; i++) {
+                    if (genderOptions[i].checked) {
+                        selectedGender = true;
+                        break;
+                    }
+                }
+
+                if (!selectedGender) {
+                    flag = true;
+                    document.getElementById("error6").innerHTML = "Please select a gender";
+                }
+                
+                if (age === "") {
+                    flag = true;
+                    document.getElementById("error7").innerHTML = "POOR";
+                }
+                if (phno === "") {
+                    flag = true;
+                    document.getElementById("error8").innerHTML = "POOR";
+                }
+                if (addr === "") {
+                    flag = true;
+                    document.getElementById("error9").innerHTML = "POOR";
+                }
+                if (state === "") {
+                    flag = true;
+                    document.getElementById("error10").innerHTML = "POOR";
+                }
+ 
+                if (flag) {
+                    return false;
+                }
+                return true;
+            }
+
+        </script>
+    </body>
+</html>
